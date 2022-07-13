@@ -103,15 +103,6 @@ public class DateUtils {
 	}
 
 	/**
-	 * Retorna una instancia Date a partir de un de una cadena con el formato
-	 * indicado
-	 * 
-	 * @param fecha   con el formato indicado en el argumento
-	 * @param formato formato a validar en la cadena fecha
-	 * @return Date
-	 */
-
-	/**
 	 * Retorna una instancia {@link Date} a partir de una cadena de texto con el
 	 * formato indicado
 	 * 
