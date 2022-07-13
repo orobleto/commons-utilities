@@ -21,7 +21,7 @@ import com.octaviorobleto.commons.utilities.text.StringUtils;
  * @date 2022-07-13
  * @class DateUtils
  */
-public class DateUtils {
+public final class DateUtils {
 	/**
 	 * No permitir crear una instancia de {@code DateUtils}
 	 */
