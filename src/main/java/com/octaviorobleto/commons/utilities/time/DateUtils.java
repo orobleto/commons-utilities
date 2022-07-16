@@ -22,16 +22,21 @@ import com.octaviorobleto.commons.utilities.text.StringUtils;
  * @class DateUtils
  */
 public final class DateUtils {
-
+/**
+ * @see Formatos Java <a href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#patterns" target="_blank">DateTimeFormatter</a>
+ */
+	
 	public static final String FORMAT_YYYY_MM_DD;
 	public static final String FORMAT_YYYY_MM_DD_HH_MM_SS_24H;
 	public static final String FORMAT_YYYY_MM_DD_HH_MM_SS_12H;
+	public static final String FORMAT_DATE_ISO_TOSTRING_FROM_JS;
 
 	// se inicializan las constantes
 	static {
 		FORMAT_YYYY_MM_DD = "yyyy-MM-dd";
 		FORMAT_YYYY_MM_DD_HH_MM_SS_24H = "yyyy-MM-dd HH:mm:ss";
 		FORMAT_YYYY_MM_DD_HH_MM_SS_12H = "yyyy-MM-dd KK:mm:ss a";
+		FORMAT_DATE_ISO_TOSTRING_FROM_JS = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
 	}
 
 	/**
