@@ -5,11 +5,11 @@
 
 	<groupId>com.octaviorobleto.commons</groupId>
 	<artifactId>commons-utilities</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 
 	<name>commons-utilities</name>
 	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
+	<url>https://github.com/orobleto/commons-utilities</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -37,6 +37,7 @@
 	</dependencies>
 
 	<build>
+		<defaultGoal>package</defaultGoal>
 		<pluginManagement>
 			<!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
 			<plugins>
