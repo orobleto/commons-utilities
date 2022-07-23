@@ -12,6 +12,6 @@ Use pom.xml de maven y agréguelo al proyecto padre
 <dependency>
 	<groupId>com.octaviorobleto.commons</groupId>
 	<artifactId>commons-utilities</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.3-SNAPSHOT</version>
 </dependency>
 ```
