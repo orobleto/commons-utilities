@@ -146,4 +146,25 @@ public class StringUtilsTest {
 		assertEquals(expected, actual);
 	}
 
+	@Test
+	public void srtRepeatWithWords() {
+		String actual = repeat(".", 10);
+		String expected = "..........";
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void srtLeftPad() {
+		String actual = leftPad("octavio", 50, "*-");
+		String expected = "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*octavio";
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void srtRightPad() {
+		String actual = rightPad("octavio", 50, "*-");
+		String expected = "octavio*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*";
+		assertEquals(expected, actual);
+	}
+
 }

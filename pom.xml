@@ -5,7 +5,7 @@
 
 	<groupId>com.octaviorobleto.commons</groupId>
 	<artifactId>commons-utilities</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>0.0.4-SNAPSHOT</version>
 
 	<name>commons-utilities</name>
 	<!-- FIXME change it to the project's website -->
