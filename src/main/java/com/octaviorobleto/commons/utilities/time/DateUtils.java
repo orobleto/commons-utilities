@@ -22,10 +22,12 @@ import com.octaviorobleto.commons.utilities.text.StringUtils;
  * @class DateUtils
  */
 public final class DateUtils {
-/**
- * @see Formatos Java <a href="https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#patterns" target="_blank">DateTimeFormatter</a>
- */
-	
+	/**
+	 * @see Formatos Java <a href=
+	 *      "https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#patterns"
+	 *      target="_blank">DateTimeFormatter</a>
+	 */
+
 	public static final String FORMAT_YYYY_MM_DD;
 	public static final String FORMAT_YYYY_MM_DD_HH_MM_SS_24H;
 	public static final String FORMAT_YYYY_MM_DD_HH_MM_SS_12H;
@@ -53,7 +55,7 @@ public final class DateUtils {
 	 * @param format  {@link String} Puede proporcionar {@code null}
 	 * @return {@code null} si srtDate o format es nulo
 	 */
-	public static LocalDate getLocalDate(String srtDate, String format) {
+	public static LocalDate getLocalDate(final String srtDate, final String format) {
 		if (StringUtils.isEmpty(srtDate) || StringUtils.isEmpty(format)) {
 			return null;
 		}
@@ -68,7 +70,7 @@ public final class DateUtils {
 	 * @param format  {@link String} Puede proporcionar {@code null}
 	 * @return {@code null} si srtDate o format es nulo
 	 */
-	public static LocalDateTime getLocalDateTime(String srtDate, String format) {
+	public static LocalDateTime getLocalDateTime(final String srtDate, final String format) {
 		if (StringUtils.isEmpty(srtDate) || StringUtils.isEmpty(format)) {
 			return null;
 		}
@@ -82,7 +84,7 @@ public final class DateUtils {
 	 * @param format    {@link String} Puede proporcionar {@code null}
 	 * @return {@code null} si localDate o format es nulo
 	 */
-	public static String getString(LocalDate localDate, String format) {
+	public static String getString(final LocalDate localDate, final String format) {
 		if (localDate == null || StringUtils.isEmpty(format)) {
 			return null;
 		}
@@ -97,7 +99,7 @@ public final class DateUtils {
 	 * @param format    {@link String} Puede proporcionar {@code null}
 	 * @return {@code null} si localDate o format es nulo
 	 */
-	public static String getString(LocalDateTime localDate, String format) {
+	public static String getString(final LocalDateTime localDate, final String format) {
 		if (localDate == null || StringUtils.isEmpty(format)) {
 			return null;
 		}
@@ -112,7 +114,7 @@ public final class DateUtils {
 	 * @return {@code null} si date o format es nulo
 	 */
 
-	public static String getString(Date date, String format) {
+	public static String getString(final Date date, final String format) {
 		if (date == null || StringUtils.isEmpty(format)) {
 			return null;
 		}
@@ -127,7 +129,7 @@ public final class DateUtils {
 	 * @param format  {@link String} Puede proporcionar {@code null}
 	 * @return {@code null} si srtDate o format es nulo
 	 */
-	public static Date getDate(String srtDate, String format) {
+	public static Date getDate(final String srtDate, final String format) {
 		if (StringUtils.isEmpty(srtDate) || StringUtils.isEmpty(format)) {
 			return null;
 		}
@@ -146,7 +148,7 @@ public final class DateUtils {
 	 * @return {@code null} si localDate es nulo
 	 */
 
-	public static Date getDate(LocalDate localDate) {
+	public static Date getDate(final LocalDate localDate) {
 		if (localDate == null) {
 			return null;
 		}
@@ -159,7 +161,7 @@ public final class DateUtils {
 	 * @param localDateTime {@link localDateTime} Puede proporcionar {@code null}
 	 * @return {@code null} si localDateTime es nulo
 	 */
-	public static Date getDate(LocalDateTime localDateTime) {
+	public static Date getDate(final LocalDateTime localDateTime) {
 		if (localDateTime == null) {
 			return null;
 		}
@@ -172,7 +174,7 @@ public final class DateUtils {
 	 * @param date {@link Date} Puede proporcionar {@code null}
 	 * @return {@code null} si date es nulo
 	 */
-	public static LocalDate getLocalDate(Date date) {
+	public static LocalDate getLocalDate(final Date date) {
 		if (date == null) {
 			return null;
 		}
@@ -185,11 +187,25 @@ public final class DateUtils {
 	 * @param date {@link Date} Puede proporcionar {@code null}
 	 * @return {@code null} si date es nulo
 	 */
-	public static LocalDateTime getLocalDateTime(Date date) {
+	public static LocalDateTime getLocalDateTime(final Date date) {
 		if (date == null) {
 			return null;
 		}
 		return Instant.ofEpochMilli(date.getTime()).atZone(ZoneId.systemDefault()).toLocalDateTime();
+	}
+
+	/**
+	 * Retorna una instancia {@link LocalDateTime} a partir de un entero largo que
+	 * representa la fecha y hora en milisegundos
+	 * 
+	 * @param date {@link Long} Puede proporcionar {@code null}
+	 * @return {@code null} si date es nulo
+	 */
+	public static LocalDateTime getLocalDateTime(final Long date) {
+		if (date == null) {
+			return null;
+		}
+		return Instant.ofEpochMilli(date).atZone(ZoneId.systemDefault()).toLocalDateTime();
 	}
 
 }
